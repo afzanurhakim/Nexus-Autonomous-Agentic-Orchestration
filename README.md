@@ -1,6 +1,6 @@
-# Nexus-Alpha: Autonomous Agentic Orchestration
+# Nexus: Autonomous Agentic Orchestration
 
-Nexus-Alpha is a **Stateful, Proactive Agentic System** designed to bridge the "Execution Gap" in creative production environments. Unlike standard linear automations, Nexus-Alpha utilizes a **"Brain-and-Muscles"** architecture—combining high-level LLM reasoning with a robust n8n orchestration layer.
+Nexus is a **Stateful, Proactive Agentic System** designed to bridge the "Execution Gap" in creative production environments. Unlike standard linear automations, Nexus-Alpha utilizes a **"Brain-and-Muscles"** architecture—combining high-level LLM reasoning with a robust n8n orchestration layer.
 
 ---
 
@@ -10,10 +10,10 @@ Nexus-Alpha is a **Stateful, Proactive Agentic System** designed to bridge the "
 
 The system is built on four core pillars:
 
-1. **The Mind (`agents/SOUL.md`):** Defines the agent's identity, Bithour-specific SOPs, and "Creative Producer" persona.
-2. **The Pulse (`agents/HEARTBEAT.md`):** A persistent 15-minute temporal daemon that proactively scans for stalled tasks on Monday.com.
-3. **The Nerves (`agents/skills/`):** Custom Python logic for **Semantic Deduplication** and secure n8n handshakes.
-4. **The Muscles (`workflows/`):** Production-ready n8n blueprints for API execution across **Monday.com** and **Notion**.
+1. **The Mind (`agents/SOUL.md`):** Defines the agent's identity
+2. **The Pulse (`agents/HEARTBEAT.md`):** A persistent 15-minute temporal daemon that proactively scans for stalled tasks
+3. **The Nerves (`agents/skills/`):** Custom Python logic for **Semantic Deduplication** and secure n8n handshakes
+4. **The Muscles (`workflows/`):** Production-ready n8n blueprints for API execution
 
 Flowchart:
 
@@ -50,7 +50,7 @@ Flowchart:
 
 ### 3. Data Sovereignty & Security
 * **Zero-Leak Policy:** Credentials managed via `.env` (strictly ignored by Git).
-* **Edge Deployment:** Designed for local VPS or Mac Mini hosting to keep internal Bithour meeting data private.
+* **Edge Deployment:** Designed for local VPS or Mac Mini hosting for further usage.
 
 ---
 
