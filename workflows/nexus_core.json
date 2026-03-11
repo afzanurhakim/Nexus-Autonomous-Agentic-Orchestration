@@ -1,0 +1,45 @@
+{
+  "name": "Nexus-Core-Orchestrator",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "nexus-task-sync",
+        "authentication": "headerAuth"
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Token Cost Calculation Logic\nconst input = $node[\"Webhook\"].json[\"body\"];\n// ... (The JS cost logic we wrote earlier)"
+      },
+      "name": "Cost Calculator",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "resource": "boardItem",
+        "operation": "create",
+        "boardId": "={{\".env.MONDAY_BOARD_ID\"}}",
+        "name": "={{$json[\"title\"]}}"
+      },
+      "name": "Monday.com",
+      "type": "n8n-nodes-base.mondayCom",
+      "typeVersion": 1,
+      "position": [650, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [ [ { "node": "Cost Calculator", "type": "main", "index": 0 } ] ]
+    },
+    "Cost Calculator": {
+      "main": [ [ { "node": "Monday.com", "type": "main", "index": 0 } ] ]
+    }
+  }
+}

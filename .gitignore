@@ -1,0 +1,46 @@
+# ==========================================
+# SECURITY & PRIVACY SHIELD
+# ==========================================
+
+# --- SENSITIVE CREDENTIALS (CRITICAL) ---
+.env
+.env.local
+.env.*.local
+*.env
+
+# --- PYTHON & DEPENDENCIES ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.metadata
+.pytest_cache/
+
+# --- DATA & MEDIA (MEETING ASSETS) ---
+data/recordings/*
+data/transcripts/*.json
+data/temp/*
+!data/recordings/.gitkeep
+
+# --- AGENT STATE & LOGS ---
+# Keeps the agent's "working memory" local.
+agents/memory/*.json
+logs/*.log
+*.log
+
+# --- MACOS SPECIFIC ---
+.DS_Store
+Thumbs.db
+
+# --- IDE & TOOLS ---
+.vscode/
+.idea/
+*.swp
+*.swo

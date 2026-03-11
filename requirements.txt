@@ -1,0 +1,16 @@
+# --- Core Agent Framework ---
+requests>=2.31.0
+python-dotenv>=1.0.1
+
+# --- Intelligence & Reasoning ---
+openai>=1.12.0
+google-generativeai>=0.3.2
+
+# --- Data & Math (For Deduplication) ---
+numpy>=1.26.4
+scikit-learn>=1.4.0
+
+# --- Infrastructure & Utils ---
+apscheduler>=3.10.4
+pydantic>=2.6.1
+loguru>=0.7.2

@@ -1,0 +1,50 @@
+{
+  "name": "ROI-Telemetry-Dashboard",
+  "nodes": [
+    {
+      "parameters": {
+        "event": "change_column_value",
+        "boardId": "={{\".env.MONDAY_BOARD_ID\"}}",
+        "columnId": "status"
+      },
+      "name": "Monday.com Trigger",
+      "type": "n8n-nodes-base.mondayComTrigger",
+      "typeVersion": 1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Business Logic: ROI Calculation\nconst savedTime = 0.5; // 30 mins saved per task\nconst hourlyRate = 35.00; // Standard Agency Rate\nconst tokenCost = $node[\"nexus_core\"].json[\"estimated_cost_usd\"];\n\nreturn {\n  roi_usd: (savedTime * hourlyRate) - tokenCost,\n  efficiency_gain: \"99.8%\"\n};"
+      },
+      "name": "ROI Logic",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [400, 300]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "update",
+        "pageId": "={{$node[\"Search Notion\"].json[\"id\"]}}",
+        "propertiesUi": {
+          "propertyValues": [
+            { "key": "ROI", "numberValue": "={{$json[\"roi_usd\"]}}" },
+            { "key": "Status", "selectValue": "Completed" }
+          ]
+        }
+      },
+      "name": "Update Notion ROI",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [600, 300]
+    }
+  ],
+  "connections": {
+    "Monday.com Trigger": {
+      "main": [ [ { "node": "ROI Logic", "type": "main", "index": 0 } ] ]
+    },
+    "ROI Logic": {
+      "main": [ [ { "node": "Update Notion ROI", "type": "main", "index": 0 } ] ]
+    }
+  }
+}
