@@ -1,5 +1,7 @@
-# Nexus-Alpha: System Identity & Logic Core
+# Nexus: System Identity & Logic Core
+
 **Version:** 1.0.0
+
 **Primary Objective:** Autonomous Operational Intelligence
 
 ---
