@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from apscheduler.schedulers.background import BackgroundScheduler
 from loguru import logger
 
-# Import your custom skills
+# Import custom skills
 from agents.skills.n8n_handshake import trigger_n8n_sync
 from agents.skills.deduplication import check_duplicate_task
 
@@ -13,11 +13,11 @@ load_dotenv()
 N8N_URL = os.getenv("N8N_WEBHOOK_URL")
 AGENT_MODE = os.getenv("AGENT_MODE", "production")
 
-logger.info(f"🚀 Nexus-Alpha Starting in {AGENT_MODE} mode...")
+logger.info(f"Nexus Starting in {AGENT_MODE} mode...")
 
 # 2. The 'Heartbeat' Routine (from HEARTBEAT.md)
 def heartbeat_routine():
-    logger.info("💓 Heartbeat: Scanning Monday.com for stalled tasks...")
+    logger.info("Heartbeat: Scanning Monday.com for stalled tasks...")
     
     # Logic: Call n8n to check for 'Stalled' status
     # This is where the 'Pulse' actually happens
@@ -30,7 +30,7 @@ def heartbeat_routine():
 
 # 3. The 'Meeting Processor' (The Reasoning Layer)
 def process_new_meeting(transcript):
-    logger.info("🧠 Soul: Reasoning through meeting transcript...")
+    logger.info("Soul: Reasoning through meeting transcript...")
     
     # Here you would call your LLM (OpenAI/Gemini) 
     # using the constraints in your SOUL.md
@@ -51,7 +51,7 @@ scheduler.add_job(heartbeat_routine, 'interval', minutes=15)
 
 if __name__ == "__main__":
     scheduler.start()
-    logger.info("💎 Persistent Loop Active. Press Ctrl+C to exit.")
+    logger.info("Persistent Loop Active. Press Ctrl+C to exit.")
     
     try:
         # Keep the main thread alive
@@ -59,4 +59,4 @@ if __name__ == "__main__":
             time.sleep(1)
     except (KeyboardInterrupt, SystemExit):
         scheduler.shutdown()
-        logger.info("🛑 Nexus-Alpha Shutdown Safely.")
+        logger.info("Nexus Shutdown Safely.")
