@@ -111,15 +111,6 @@ python main.py
 
 ---
 
-💡 **Engineering Vision**
-
-"In a high-growth production house, AI shouldn't just 'answer questions'—it should proactively manage the flow of work. Nexus-Alpha is built with the discipline of a mechanical system: it is resilient, predictable, and always oriented toward the next deliverable."
-
-
----
-
-
-
 
 
 
