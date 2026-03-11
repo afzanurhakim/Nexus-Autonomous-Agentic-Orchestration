@@ -1,12 +1,10 @@
-# 🚀 Nexus-Alpha: Autonomous Agentic Orchestration
-**Architect:** Muhammad Afza  
-**Specialization:** Industrial-Grade AI Systems & Operational Intelligence
+# Nexus-Alpha: Autonomous Agentic Orchestration
 
 Nexus-Alpha is a **Stateful, Proactive Agentic System** designed to bridge the "Execution Gap" in creative production environments. Unlike standard linear automations, Nexus-Alpha utilizes a **"Brain-and-Muscles"** architecture—combining high-level LLM reasoning with a robust n8n orchestration layer.
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 
 
@@ -38,7 +36,7 @@ Flowchart:
 
 ---
 
-## 🛠️ Key Features
+## Key Features
 
 ### 1. Industrial-Grade Reliability
 * **Fault Tolerance:** Built-in exponential backoff and error logging for API stability.
@@ -56,7 +54,7 @@ Flowchart:
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 NexusMeeting-AI/
@@ -78,7 +76,7 @@ NexusMeeting-AI/
 
 ---
 
-📥 **Getting Started**
+**Getting Started**
 
 **Prerequisites**
 - Python 3.10+
