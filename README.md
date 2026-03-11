@@ -1,6 +1,6 @@
 # Nexus: Autonomous Agentic Orchestration
 
-Nexus is a **Stateful, Proactive Agentic System** designed to bridge the "Execution Gap" in creative production environments. Unlike standard linear automations, Nexus-Alpha utilizes a **"Brain-and-Muscles"** architecture—combining high-level LLM reasoning with a robust n8n orchestration layer.
+Nexus is a **Stateful, Proactive Agentic System** designed to bridge the "Execution Gap" in creative production environments. Unlike standard linear automations, Nexus utilizes a **"Brain-and-Muscles"** architecture—combining high-level LLM reasoning with a robust n8n orchestration layer.
 
 ---
 
