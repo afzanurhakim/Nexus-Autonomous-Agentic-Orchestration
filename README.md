@@ -57,7 +57,7 @@ Flowchart:
 ## Repository Structure
 
 ```text
-NexusMeeting-AI/
+Nexus-Autonomous-Agentic-Orchestration/
 ├── agents/
 │   ├── SOUL.md                 # Agent Identity & Persona
 │   ├── HEARTBEAT.md            # Temporal Logic & Routines
@@ -86,8 +86,8 @@ NexusMeeting-AI/
 **Installation**
 1. **Clone the repository**
 ```bash
-git clone https://github.com/afzanurhakim/NexusMeeting-AI.git
-cd NexusMeeting-AI
+git clone https://github.com/afzanurhakim/Nexus-Autonomous-Agentic-Orchestration.git
+cd Nexus-Autonomous-Agentic-Orchestration
 ```
 2. **Install dependencies**
 ```bash
